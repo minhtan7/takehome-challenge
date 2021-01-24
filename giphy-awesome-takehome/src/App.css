@@ -1,0 +1,21 @@
+body {
+  max-width: 1440px;
+}
+.nav-link-all {
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  margin: 0 10px;
+  color: white;
+}
+.list-gifs {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gif {
+  height: 200px;
+  padding: 2px;
+}
