@@ -6,6 +6,9 @@ import PublicNavbar from "./components/PublicNavbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SearchForm from "./components/SearchForm";
 import "./components/IconFontAwesome";
+import ProtectedRouter from "./pages/ProtectdRouter";
+import Login from "./pages/Login";
+import DetailGif from "./pages/DetailGif";
 
 function App() {
   return (
@@ -39,6 +42,11 @@ function App() {
           render={(props) => (
             <Home {...props} endpoint="search?q=celebrities" />
           )}
+        />
+        <Route path="/login" exact component={Login} />
+        <ProtectedRouter
+          path="/gif/:id"
+          render={(props) => <DetailGif {...props} />}
         />
       </Switch>
     </Router>
